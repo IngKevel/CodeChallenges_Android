@@ -1,4 +1,4 @@
-package com.chilatesoftware.codechallenges_android.ui.theme
+package com.chilatesoftware.codechallenges_android.presentation.theme
 
 import androidx.compose.ui.graphics.Color
 

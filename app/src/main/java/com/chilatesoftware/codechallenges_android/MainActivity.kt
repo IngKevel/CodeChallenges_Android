@@ -11,7 +11,8 @@ import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
-import com.chilatesoftware.codechallenges_android.ui.theme.CodeChallenges_AndroidTheme
+import com.chilatesoftware.codechallenges_android.presentation.pages.home_page.HomeScreen
+import com.chilatesoftware.codechallenges_android.presentation.theme.CodeChallenges_AndroidTheme
 
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -20,27 +21,11 @@ class MainActivity : ComponentActivity() {
         setContent {
             CodeChallenges_AndroidTheme {
                 Scaffold(modifier = Modifier.fillMaxSize()) { innerPadding ->
-                    Greeting(
+                    HomeScreen(
                         modifier = Modifier.padding(innerPadding)
                     )
                 }
             }
         }
-    }
-}
-
-@Composable
-fun Greeting(modifier: Modifier = Modifier) {
-    Text(
-        text = "Code Challenges - Android",
-        modifier = modifier
-    )
-}
-
-@Preview(showBackground = true)
-@Composable
-fun GreetingPreview() {
-    CodeChallenges_AndroidTheme {
-        Greeting()
     }
 }
