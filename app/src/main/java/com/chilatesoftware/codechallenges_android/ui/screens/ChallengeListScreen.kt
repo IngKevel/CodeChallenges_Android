@@ -12,11 +12,13 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import com.chilatesoftware.codechallenges_android.model.CodeChallenge
 import com.chilatesoftware.codechallenges_android.model.Difficulty
-import com.chilatesoftware.codechallenges_android.model.SampleData
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
-fun ChallengeListScreen(onChallengeClick: (CodeChallenge) -> Unit) {
+fun ChallengeListScreen(
+    challenges: List<CodeChallenge>,
+    onChallengeClick: (CodeChallenge) -> Unit
+) {
     Scaffold(
         topBar = {
             TopAppBar(
@@ -32,7 +34,7 @@ fun ChallengeListScreen(onChallengeClick: (CodeChallenge) -> Unit) {
             verticalArrangement = Arrangement.spacedBy(12.dp),
             modifier = Modifier.padding(innerPadding)
         ) {
-            items(SampleData.challenges) { challenge ->
+            items(challenges) { challenge ->
                 ChallengeCard(
                     challenge = challenge,
                     onClick = { onChallengeClick(challenge) }
