@@ -1,4 +1,4 @@
-package com.chilatesoftware.codechallenges_android.presentation.theme
+package com.chilatesoftware.codechallenges_android.ui.theme
 
 import android.os.Build
 import androidx.compose.foundation.isSystemInDarkTheme
